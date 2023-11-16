@@ -100,17 +100,22 @@ header{
     padding: 15px;
 }
 
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 50px;
     background-color: #ff4545;
     color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave ao movimento */
+    margin-top: 166px; /* Mantém o espaço no topo */
 }
+
 
 footer p{
     font-size: 2.5vh;
@@ -188,15 +193,15 @@ footer p{
 
 /*css do contato*/
 main{
-    min-height: 88vh;
+    min-height: calc(100vh - 50px);
+    padding-bottom: 50px;
 }
 
 main h1 {
     font-size: 28pt;
     text-align: center;
-    color: rgb(255, 255, 255), 255;
     background: #ff4545;
-    padding: 3em;
+    padding: 80px;
     border-top: 5px solid white;
 }
 
@@ -216,16 +221,6 @@ main h1 {
     margin-bottom: 5px;
 }
 
-#iniciarChat {
-    background-color: #ff4545;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 img {
     width: 100px;
 }
@@ -237,4 +232,39 @@ section {
 
 h1 {
     color: white;
+}
+
+#iniciarChat {
+    background-color: #ff4545;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #ff4545;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Para que o contêiner se ajuste ao tamanho do botão */
+    overflow: hidden; /* Para esconder a parte da borda que fica fora do contêiner */
+}
+
+#iniciarChat:hover {
+    background-color: #fff;
+    color: #ff4545;
+    border-color: #ff4545;
+}
+
+#botaoCaptcha {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#chatBox {
+    margin-bottom: 2000px;
+    margin-left: 1335px; /* Adiciona uma margem à direita para evitar que fique colado à borda */
+}
+
+.hidden {
+    display: none;
 }

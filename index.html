@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Contato</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
@@ -42,13 +42,20 @@
                 <img src="./imgs/chaticone.png" alt="Ícone Chat">
                 <h2>Chat com Atendente</h2>
                 <button id="iniciarChat">Iniciar Chat</button>
+                <div id="campoIdade" style="display: none;">
+                    <button id="botaoCaptcha">ReCaptcha: Clique 5 vezes para acessar</button>
+                </div>
             </div>
         </section>
-    </main>
+        
+        <div id="chatBox" class="hidden">
+            <input type="text" id="mensagemInputFicticio" placeholder="Digite sua mensagem...">
+            <button id="enviarMensagemFicticio">Enviar</button>
+        </div>        
 
-    <footer>
+    <footer class="sticky-footer">
         <p><b>&copy; 1995 - 2023 AutoMarket S.A. Todos os direitos reservados.</b></p>
     </footer>
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
